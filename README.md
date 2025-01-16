@@ -50,7 +50,7 @@ java -Dfile.encoding=UTF-8 RsyncReceiver 8081 output.txt helloworld
 bash
 java -Dfile.encoding=UTF-8 RsyncSender [모니터링할파일] [목적지IP:포트,목적지IP:포트,...] [공유키]
 
-java -Dfile.encoding=UTF-8 RsyncSender input.txt 192.168.0.2:8081,192.168.0.3:8082 1234567890
+java -Dfile.encoding=UTF-8 RsyncSender input.txt 192.168.0.2:8081,192.168.0.3:8082 helloworld
 
 데이터 전송 예)
 dir >> input.txt
@@ -83,5 +83,6 @@ nohup ./logsender.sh &
 - 방화벽 설정에서 사용할 포트가 열려있어야 합니다.
 - 수신자가 먼저 실행된 상태여야 합니다.
 - 수신자가 늦게 떠도 1분 정도후면 데이터가 전송됩니다.
-- 수신자 상태 확인 주기는 1분 입니다.
-- 데이터 전송시 수신자 connect timeout 시간은 3초 입니다.
+- 수신자 상태 확인 주기는 1분 입니다. (STATUS_CHECK_TIMEOUT)
+- 데이터 전송시 수신자 connect timeout 시간은 3초 입니다. (STATUS_CHECK_TIMEOUT)
+
