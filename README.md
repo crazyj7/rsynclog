@@ -83,6 +83,6 @@ nohup ./logsender.sh &
 - 방화벽 설정에서 사용할 포트가 열려있어야 합니다.
 - 수신자가 먼저 실행된 상태여야 합니다.
 - 수신자가 늦게 떠도 상태확인 주기 이후부터 데이터가 전송됩니다.
-- 수신자 상태 확인 주기는 1분 입니다. (STATUS_CHECK_TIMEOUT)
-- 데이터 전송시 수신자 connect timeout 시간은 3초 입니다. (STATUS_CHECK_TIMEOUT)
+- 수신자 상태 확인 주기는 1분 입니다. (STATUS_CHECK_INTERVAL)
+- 데이터 전송시 수신자 connect timeout 시간은 3초 입니다. (CONNECT_TIMEOUT)
 
